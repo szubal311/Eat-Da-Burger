@@ -1,23 +1,37 @@
-<nav class="navbar bg-dark">
-    <img src="../public/images/burger_image3.jpg" height="80" class="d-inline-block align-top mx-auto" alt="">
-</nav>
-<div class="container my-5">
-    <div class="row">
-        <div class="col">
-            {{> uneaten-burger }}
-        </div>
-        <div class="col">
-            {{> burger-list }}
-        </div>
+<div class="row">
+    <div class="col-md-6 mb-6">
+        <h1>Menu</h1>
+        <ol>
+            {{#each burgers}}
+            {{#unless eaten}}
+            <li>
+                {{name}} <button class="changeDevour btn-md bg-dark text-white" date-id="{{id}}" data-newDevour="{{devoured}}" type="submit">Devour</button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
     </div>
-    <div class="row mt-5">
-        <div class="col-md-6 offset-md-3">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name" id="burgerName">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-success" type="button" id="addBurger">Add</button>
-                </div>
+    <div class="col-md-6 mb-6">
+        <h1>All Gone!</h1>
+        <ol>
+            {{#each burgers}}
+            {{#if eaten}}
+            <li>
+                {{name}}
+            </li>
+            {{/each burgers}}
+            {{/if eaten}}
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form id="createform">
+            <div class="form-group">
+                <label for="burgerNew">Add a new Buger</label>
+                <input type="text" class="form-control" name="" id="hambr" aria-describedby="helpId" placeholder="What's the Neame of your burger">
             </div>
-        </div>
+            <button type="submit" class="bg-dark text-white">Lest's add the burger!</button>
+        </form>
     </div>
 </div>
