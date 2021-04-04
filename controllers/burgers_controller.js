@@ -1,6 +1,6 @@
 const express = require('express');
 const { end } = require('../config/connection');
-const hbsExp = require
+const hbsExp = require('express-handlebars')
 const router = express.Router();
 
 const daBurger = require('../models/burgers');
