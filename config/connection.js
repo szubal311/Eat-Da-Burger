@@ -3,19 +3,32 @@ const mysql = require('mysql');
 
 let connection;
 
-if(process.env.JAWS_URL){
-  connection = mysql.createConnnection(process.env.JAWS_URL);
-} else {
+// if(process.env.PASSWORD){
+//   connection = mysql.createConnnection(process.env.PASSWORD);
+// } else {
 
-const connection = mysql.createConnection({
-  host: 'localhost',
+// const connection = mysql.createConnection({
+  
+//     host: 'localhost',  
+//     port: 3306,
+//     user: 'root',      
+//     password: process.env.PASSWORD,
+//     database: 'burgers_db',
+//     insecureAuth : true
+ 
+  
+// });
+// };
+
+connection = mysql.createConnection({
+  
+  host: 'localhost',  
   port: 3306,
-  user: 'root',
-  // NOTE: Be sure to add your MySQL password here!
-  password: '',
+  user: 'root',      
+  password: "@!!i311C@$h*",
   database: 'burgers_db',
+  insecureAuth : true
 });
-};
 // Make connection.
 connection.connect((err) => {
   if (err) {

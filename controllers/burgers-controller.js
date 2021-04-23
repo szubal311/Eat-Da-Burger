@@ -1,11 +1,6 @@
 const express = require('express');
-const app = express();
-const hbsExp = require('express-handlebars')
 const router = express.Router();
 const daBurger = require('../models/burgers');
-
-app.engine('handlebars', hbsExp({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
 
 router.get ('/', (req,res) => {
     daBurger.selectAll((data) => {
@@ -25,7 +20,7 @@ router.post('/api/burgers', (req, res) =>{
     
 });
 
-router.put('/api/burgers/id:', (req, res) => {
+router.put('/api/burgers/:id', (req, res) => {
     const id = `${req,params.id}`;
 
     daBurger.updateOne(

@@ -5,7 +5,7 @@
             {{#each burgers}}
             {{#unless eaten}}
             <li>
-                {{name}} <button class="changeDevour btn-md bg-dark text-white" date-id="{{id}}" data-newDevour="{{devoured}}" type="submit">Devour</button>
+                {{name}} <button class="changeDevour btn-sm bg-dark text-white" date-id="{{id}}" data-newDevour="{{devoured}}" type="submit">Devour</button>
             </li>
             {{/unless}}
             {{/each}}
@@ -19,8 +19,8 @@
             <li>
                 {{name}}
             </li>
-            {{/each burgers}}
-            {{/if eaten}}
+            {{/each}}
+            {{/if}}
         </ol>
     </div>
 </div>

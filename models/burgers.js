@@ -1,7 +1,7 @@
 const orm = require('../config/orm');
 
-const yumBurger = {
-    all(cb){
+const burgers = {
+    all: function (cb){
         orm.selectAll('burgers', (res) => {
             cb(res);
         });
@@ -18,4 +18,4 @@ const yumBurger = {
     }
 };
 
-module.exports = yumBurger
+module.exports = burgers
