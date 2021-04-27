@@ -1,16 +1,21 @@
   
-html {
-    position: relative;
-    min-height: 100%;
+.jumbotron {
+    background-image: url("/images/burger_image.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    text-align: right;
+    background-color: white;
+    font-size: 200px;
+
 }
 
 body {
-    margin-bottom: 45px;
+    background-color:rgb(139, 185, 187) ;
 }
 
-.card-header {
-    background-color: #EE6E73;
-    color: #fff;
+li {
+    font-size: larger;
+    margin-bottom: 5px;
 }
 
 footer {
@@ -20,11 +25,11 @@ footer {
     text-align: center;
     width: 100%;
     background-color: #b9c4cf;
-    border-top: 5px solid #EE6E73;
+    border-top: 5px solid grey;
 }
 
 footer small {
     line-height: 40px;
-    color: #D2B773;
-    font-size: 12px;
+    color: #000000;
+    font-size: 24px;
 }

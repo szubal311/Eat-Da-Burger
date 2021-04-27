@@ -1,7 +1,7 @@
-INSERT INTO burgers ( burger_name, devoured)
+INSERT INTO burgers ( burger_name)
 VALUES
-("Celestial Burger", false),
-("The Big Benny", false),
-("The Bear Burger", false),
-("Haystack Double", false),
-("Garlic Burger", false);
+("Celestial Burger"),
+("The Big Benny"),
+("The Bear Burger"),
+("Haystack Double"),
+("Garlic Burger");

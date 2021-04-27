@@ -3,7 +3,7 @@
         <h1>Menu</h1>
         <ol>
             {{#each burgers}}
-            {{#unless eaten}}
+            {{#unless devoured}}
             <li>
                 {{name}} <button class="changeDevour btn-sm bg-dark text-white" date-id="{{id}}" data-newDevour="{{devoured}}" type="submit">Devour</button>
             </li>
@@ -15,23 +15,23 @@
         <h1>All Gone!</h1>
         <ol>
             {{#each burgers}}
-            {{#if eaten}}
+            {{#if devoured}}
             <li>
                 {{name}}
-            </li>
-            {{/each}}
+            </li>            
             {{/if}}
+            {{/each}}
         </ol>
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
-        <form id="createform">
+    <div class="col-md-6">
+        <form id="create-form">
             <div class="form-group">
                 <label for="burgerNew">Add a new Buger</label>
                 <input type="text" class="form-control" name="" id="hambr" aria-describedby="helpId" placeholder="What's the Neame of your burger">
             </div>
-            <button type="submit" class="bg-dark text-white">Lest's add the burger!</button>
+            <button type="submit" class="bg-secondary text-white">Let's add the burger!</button>
         </form>
     </div>
 </div>

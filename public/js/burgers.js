@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 const id = e.target.getAttribute('data-id');
                 console.log(`I am id ${id}`)
 
-                fetch(`/api/burgers/${id}`, {
+                fetch(`/api/burgers/:id`, {
                     method: 'PUT',
                     hearders: {
                         Accept: 'application/json',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault();
 
             const burgerNew = {
-                name: document.getElementById('hambur').Value.trim(),
+                name: document.getElementById('hambr').Value.trim(),
             };
             console.log(burgerNew)
 
