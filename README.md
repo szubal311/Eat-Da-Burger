@@ -12,4 +12,4 @@ Stack Overflow
 Bootcamp activities 6, 7, 10, 16, and 17
 
 ## Screenshots
-<img src="public/images/burgers-screenshot.jpg>
+<img src="./public/images/burgers-screenshot.jpg" alt="screenshot">
