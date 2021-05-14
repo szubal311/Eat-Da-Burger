@@ -12,16 +12,16 @@ const orm = {
 
 
 insertOne(reqBody, name, cb) {
-  connection.query('INSERT INTO ?? SET name = ?', [reqBody, name], (err, result) => {
+  connection.query('INSERT INTO ?? SET burger_name = ?', [reqBody, name], (err, result) => {
     if (err) throw err;
     cb(result);
   })
 },
 
 updateOne(id, cb) {
-  connection.query(`UPDATE burgers SET eaten = 1 WHERE id = ?`, [id], (err, result) => {
+  connection.query(`UPDATE burgers SET devoured = 1 WHERE id = ?`, [id], (err, result) => {
     if (err) throw err;
-    cb(err)
+    cb(result)
   })
 }
 

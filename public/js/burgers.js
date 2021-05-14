@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (event) {
-        console.info('DOM loaded');
-    }
-
     const changeDevour = document.querySelectorAll('.changeDevour');
 
     if (changeDevour) {
@@ -10,8 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             button.addEventListener('click', (e) => {
                 const id = e.target.getAttribute('data-id');
                 console.log(`I am id ${id}`)
+                
 
-                fetch(`/api/burgers/:id`, {
+                fetch(`/api/burgers/${id}`, {
                     method: 'PUT',
                     hearders: {
                         Accept: 'application/json',
@@ -19,8 +15,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     },
                 }).then((response) => {
                     if (response.ok) {
-                        console.log(`devoured the burger`);
-                        locationreload('/');
+                        console.log('devoured the burger');
+                        location.reload();
                     } else {
                         alert('an error has occured');
                     }
@@ -37,7 +33,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault();
 
             const burgerNew = {
-                name: document.getElementById('hambr').Value.trim(),
+                name: document.getElementById('hambr').value.trim(),
             };
             console.log(burgerNew)
 
@@ -55,4 +51,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
         });
     }
-});
